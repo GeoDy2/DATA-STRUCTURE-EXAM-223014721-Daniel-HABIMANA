@@ -5,11 +5,11 @@ class CRMHeap:
         self.heap = []
 
     def add_request(self, priority, customer):
-        heapq.heappush(self.heap, (priority, customer))  # Push tuple (priority, customer)
+        heapq.heappush(self.heap, (priority, customer))  
 
     def process_request(self):
         if self.heap:
-            priority, customer = heapq.heappop(self.heap)  # Pop the request with highest priority
+            priority, customer = heapq.heappop(self.heap)  
             print(f"Processing request: {customer} with priority {priority}")
         else:
             print("No requests to process.")
@@ -26,7 +26,7 @@ class CRMHeap:
 # Example
 crm_heap = CRMHeap()
 crm_heap.add_request(3, "Customer1:Daniel")
-crm_heap.add_request(1, "Customer2: Patrick")  # Higher priority
+crm_heap.add_request(1, "Customer2: Patrick")  
 crm_heap.add_request(5, "Customer3: Allan")
 
 crm_heap.display_requests()
