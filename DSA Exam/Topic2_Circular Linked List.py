@@ -10,15 +10,15 @@ class CircularLinkedList:
 
     def add(self, data):
         new_node = Node(data)
-        if not self.head:  # If the list is empty
+        if not self.head:  
             self.head = new_node
-            self.head.next = self.head  # Circular link
+            self.head.next = self.head  
         else:
             temp = self.head
-            while temp.next != self.head:  # Traverse to the last node
+            while temp.next != self.head:  
                 temp = temp.next
             temp.next = new_node
-            new_node.next = self.head  # Maintain circular property
+            new_node.next = self.head  
 
     def traverse(self):
         if not self.head:
