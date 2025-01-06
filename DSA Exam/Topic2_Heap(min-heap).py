@@ -23,14 +23,14 @@ class CRMHeap:
             print("No requests in the queue.")
 
 
-# Example
+
 crm_heap = CRMHeap()
 crm_heap.add_request(3, "Customer1:Daniel")
 crm_heap.add_request(1, "Customer2: Patrick")  
 crm_heap.add_request(5, "Customer3: Allan")
 
 crm_heap.display_requests()
-crm_heap.process_request()  # Process the highest priority
+crm_heap.process_request()  
 crm_heap.display_requests()
 
 
