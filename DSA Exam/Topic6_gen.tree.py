@@ -1,8 +1,8 @@
 class TreeNode:
     def __init__(self, key, data=None):
-        self.key = key  # Node identifier (e.g., department or category)
-        self.data = data  # Associated data (e.g., customer group details)
-        self.children = []  # List of child nodes
+        self.key = key  
+        self.data = data  
+        self.children = []  
 
     def add_child(self, child_node):
         """Add a child node to the current node."""
@@ -48,16 +48,16 @@ class HierarchicalTree:
 
 crm_tree = HierarchicalTree()
 
-# Setting the root node
+
 crm_tree.set_root("Company", {"info": "Top Level"})
 
-# Adding child nodes
+
 crm_tree.add_node("Company", "Sales", {"info": "Handles sales operations"})
 crm_tree.add_node("Company", "Support", {"info": "Customer support division"})
 crm_tree.add_node("Sales", "Domestic", {"info": "Domestic sales team"})
 crm_tree.add_node("Sales", "International", {"info": "International sales team"})
 
-# Display the hierarchy
+
 print("CRM Hierarchical Data:")
 crm_tree.root.display()
 
