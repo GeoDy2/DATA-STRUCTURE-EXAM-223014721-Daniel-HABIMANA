@@ -40,7 +40,7 @@ class SimpleBST:
         inorder(self.root)
 
 
-# Example Usage
+
 bst = SimpleBST()
 bst.insert(101, {"name": "Customer A"})
 bst.insert(50, {"name": "Customer B"})
