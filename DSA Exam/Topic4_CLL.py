@@ -1,7 +1,7 @@
 class TreeNode:
     def __init__(self, key, data=None):
-        self.key = key  # The key for sorting (e.g., customer ID or purchase value)
-        self.data = data  # Additional customer data
+        self.key = key  
+        self.data = data  
         self.left = None
         self.right = None
 
@@ -38,7 +38,7 @@ class BinarySearchTree:
 
     def _search_recursively(self, current, key):
         if current is None:
-            return None  # Key not found
+            return None  
         if current.key == key:
             return current
         elif key < current.key:
@@ -60,16 +60,16 @@ class BinarySearchTree:
         return result
 
 
-# Example
+# example
 crm_bst = BinarySearchTree()
 
-# Insert customer records
+
 crm_bst.insert(101, {"name": "Daniel", "email": "danielgeoffrey@example.com"})
 crm_bst.insert(50, {"name": "Patrick", "email": "patrickniyo@example.com"})
 crm_bst.insert(150, {"name": "Allan", "email": "allanrudas@example.com"})
 crm_bst.insert(75, {"name": "Monique", "email": "moniqueuwase@example.com"})
 
-# Search for a specific customer
+
 search_key = 50
 result = crm_bst.search(search_key)
 if result:
@@ -77,7 +77,7 @@ if result:
 else:
     print(f"Customer with key {search_key} not found.")
 
-# Display all customer records in sorted order
+
 print("Customer Records in Sorted Order:")
 for key, data in crm_bst.inorder_traversal():
     print(f"ID: {key}, Data: {data}")
